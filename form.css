@@ -23,7 +23,22 @@ input {
 }
 
 /* Установка базовых стилей для текстовых элементов */
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
   margin: 0;
   padding: 0;
   font-size: 100%;
@@ -31,7 +46,8 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl,
 }
 
 /* Удаление списка стилей для ul и ol */
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -55,14 +71,18 @@ table {
 }
 
 /* Обнуление стилей полей формы и кнопок */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   margin: 0;
   font-family: inherit;
   font-size: inherit;
 }
 
 /* Установка базового стиля для fieldset и legend */
-fieldset, legend {
+fieldset,
+legend {
   padding: 0;
   border: none;
 }
@@ -93,7 +113,7 @@ body {
   text-align: center;
 }
 
-.error-meseage {
+.error-message {
   color: #c5322d;
 }
 
@@ -106,6 +126,8 @@ body {
   width: 300px;
   height: 40px;
   text-transform: uppercase;
+  outline: none;
+  border: none;
 }
 
 .input {
@@ -122,4 +144,4 @@ body {
   margin-top: 30px;
   display: flex;
   align-self: flex-start;
-}/*# sourceMappingURL=form.css.map */
+} /*# sourceMappingURL=form.css.map */
