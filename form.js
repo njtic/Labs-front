@@ -77,6 +77,36 @@ document.querySelector("form").onsubmit = function (event) {
   if (!isValid) {
     event.preventDefault();
   }
+else{
+  const formData = {
+    username: nameValue,
+    email: emailValue,
+    password: passwordValue,
+    confirmPassword: confirmPasswordValue,
+  };
+
+  // Отправка данных на сервер
+  fetch("http://localhost:3000/submit-form", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Ошибка при отправке данных на сервер");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      alert("Данные успешно отправлены");
+      // Здесь можно добавить дополнительные действия после успешной отправки
+    })
+    .catch((error) => {
+      console.error("Ошибка:", error);
+    });
+  }
 };
 
 function setError(fieldId, message) {
